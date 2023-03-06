@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Bookmarks</title>
+    <link rel="icon" type="image/x-icon" href="images/desklamp_icon.ico" />
+  </head>
+  <script>
+    var tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubePlayerAPIReady() {
+      player = new YT.Player("ytplayer", {
+        height: "360",
+        width: "640",
+        videoId: "fJ9rUzIMcZQ",
+      });
+    }
+    var timestamps = [0, 0];
+    var count = 0;
+    function bookMark() {
+      console.log(player.playerInfo.currentTime);
+      timestamp = player.playerInfo.currentTime;
+      document.getElementById("time").innerHTML = timestamp;
+      count++;
+      timestamps[count] = timestamp;
+      document.getElementById("time-array").innerHTML = timestamps;
+    }
+    function setCurrentTime(number) {
+      player.seekTo(timestamps[number]);
+    }
+  </script>
+  <body>
+    <div id="ytplayer"></div>
+    <br /><br />
+    <button
+      style="
+        background-color: #008cba;
+        padding: 15px 32px;
+        font-size: 16px;
+        color: white;
+        border: none;
+        cursor: pointer;
+      "
+      onClick="bookMark();"
+    >
+      Bookmark timestamp
+    </button>
+    <p>Current bookmarked timestamp:</p>
+    <p id="time">Output of bookmarked timestamps</p>
+    <p>All bookmarked timestamps:</p>
+    <p id="time-array">Output of array of timestamps</p>
+    <a href="javascript:void(1);" onClick="setCurrentTime(0)">1st timestamp</a
+    >&nbsp;
+    <a href="javascript:void(1);" onClick="setCurrentTime(1)">2nd timestamp</a
+    >&nbsp;
+    <a href="javascript:void(1);" onClick="setCurrentTime(2)">3rd timestamp</a
+    >&nbsp;
+    <a href="javascript:void(1);" onClick="setCurrentTime(3)">4th timestamp</a
+    >&nbsp;
+    <a href="javascript:void(1);" onClick="setCurrentTime(4)">5th timestamp</a
+    >&nbsp;
+    <a href="javascript:void(1);" onClick="setCurrentTime(5)">6th timestamp</a>
+  </body>
+</html>

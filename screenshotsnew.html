@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Screenshot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  </head>
+  <body>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/fJ9rUzIMcZQ"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    <button id="capture">Capture Screenshot</button>
+
+    <script>
+      const captureBtn = document.getElementById("capture");
+      const iframe = document.querySelector("iframe");
+
+      captureBtn.addEventListener("click", () => {
+        domtoimage.toPng(iframe).then((dataUrl) => {
+          const link = document.createElement("a");
+          link.download = "screenshot.png";
+          link.href = dataUrl;
+          link.click();
+        });
+      });
+    </script>
+  </body>
+</html>

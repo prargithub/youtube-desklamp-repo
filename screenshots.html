@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screenshot</title>
+    <link rel="icon" type="image/x-icon" href="images/desklamp_icon.ico" />
+  </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+  <style>
+    #photo {
+      border: 2px solid rgb(0, 0, 0);
+      padding: 20px;
+    }
+  </style>
+
+  <body>
+    <div id="photo">
+      <h2>SCREENSHOT FEATURE</h2>
+      <iframe
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        title="Bohemian rhapsody"
+        height="200px"
+      ></iframe>
+      &nbsp;
+      <button
+        style="
+          background-color: #008cba;
+          padding: 15px 32px;
+          font-size: 16px;
+          color: white;
+          border: none;
+          cursor: pointer;
+        "
+        onclick="takeshot()"
+      >
+        Take Screenshot
+      </button>
+    </div>
+    <h2>SCREENSHOT:</h2>
+    <div id="output"></div>
+
+    <script type="text/javascript">
+      function takeshot() {
+        let div = document.getElementById("photo");
+        html2canvas(div).then(function (canvas) {
+          document.getElementById("output").appendChild(canvas);
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Desklamp YouTube</title>
+    <link rel="icon" type="image/x-icon" href="images/desklamp_icon.ico" />
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="iframe" content="framebox">
+    <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/css/app.css">
+      
+    <script nonce="NKdeugQUOAVlLa3+KVQoTVPEx7CbWr">
+      (function(){
+        window.framebox=window.framebox||function(){(window.framebox.q=window.framebox.q||[]).push(arguments)};
+        
+        var a={},b=function(){(window.framebox.dq=window.framebox.dq||[]).push(arguments)};
+        ['getUrl','handleLinkClicksInParent','initAutoSize','navigate','pushState','replaceState',
+         'requestQueryAndFragment','sendEvent','updateSize'].forEach(function(x){a[x]=function(){
+          b(x,arguments)}});
+        window.devsite={framebox:{AutoSizeClient:a}};
+      })();
+      
+      (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+        t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+        E.parentNode.insertBefore(t,E);})(window, document, 'script',
+        'https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53","https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,1,null,1,null,[1,6,8,12,14,17,21,25,40,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,111,112,113,115,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,144,147,148,149,150,151,152,154,155,156,157,158,159,161,163,164,165,168,169,170,172,173,179,180,182,183,186,190,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Cloud__enable_cloud_dlp_service","Experiments__enable_experiments","Search__enable_suggestions_from_borg","Profiles__enable_developer_profiles_callout","Profiles__enable_developer_profiles_interests","Badges__enable_delete_badges","Experiments__reqs_query_experiments","Cloud__enable_cloud_facet_chat","Badges__enable_drag_and_drop_badges","MiscFeatureFlags__enable_footprints_record_views","MiscFeatureFlags__enable_tls_version_for_gaia_calls","SignIn__enable_auto_signin_oauth","MiscFeatureFlags__emergency_css","Search__enable_acl_suggestions","Cloud__enable_cloudx_experiment_ids","BookNav__enable_book_nav_filtering","Cloud__enable_cloud_shell_fte_user_flow","Significatio__enable_by_tenant","Profiles__require_profile_eligibility_for_signin","Profiles__enable_public_developer_profiles","Significatio__enable_experiment_id_caching","Search__enable_devsite_serp","Search__enable_page_map","Profiles__enable_page_saving","Cloud__enable_cloud_shell","Profiles__enable_developer_profiles_dashboard_recommendations","BookNav__enable_collapsible_book_nav","Profiles__enable_profile_notifications_ui","Profiles__enable_profile_collections"]]')
+      
+        function setCurrentTime(num) {
+        var object = [0, 60, 120, 180, 240];
+        player.seekTo(object[num]);
+      }
+      function getTime(){
+        const video = document.createElement('video');
+        console.log(video.currentTime);
+      }
+      </script>
+  </head>
+  
+  <body style="height: auto; padding: 16px;">
+    <meta name="auto_height" content="true" /><meta name="auto_width" content="true" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://developers.google.com/static/youtube/css/local_extensions.css"/> -->
+    <link rel="stylesheet" type="text/css" href="youtubestyles.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://developers.google.com/static/youtube/css/youtube_css.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://developers.google.com/static/youtube/css/player_demo.css"/> -->
+    <style>
+      body.docs table, body.docs table td {
+        border:0;
+      }
+      body.docs h2, body.docs h3, body.docs h4, body.docs h5 {
+        margin-bottom:.1em;
+      }
+    </style>
+    <script src="//www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("swfobject", "2.1");
+    </script type="text/javascript">
+
+    <script src="youtubefuncs.js" type="text/javascript"></script> 
+    <!-- https://developers.google.com/static/youtube/js/as3_demo_functions.js -->
+  <div id="player-demo-page-content">
+  <!-- embed the player -->
+
+  <table style="border:0">
+    <tr>
+      <td style="border:0; width: 540px;">
+        <div id="html5player-wrapper">
+          <div id="myythtml5player"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div id="player-demo-functions">
+    <table id="player-demo-functions-table" class="noborder noTopMargin" style="display:inline">
+      <tr>
+        <a
+            href="javascript:console.log('starting');alert('video starting now!')"
+            onClick="setCurrentTime(0)"
+            >0:00 beginning of the video</a
+          ><br />
+        <a href="javascript:void(1);" onClick="setCurrentTime(1)"
+        >1:00 minute done</a
+      ><br />
+      <a href="javascript:void(2);" onClick="setCurrentTime(2)"
+            >2:00 minutes done</a
+          ><br />
+          <a href="javascript:void(3);" onClick="setCurrentTime(3)"
+            >3:00 minutes done</a
+          ><br />
+      </tr>
+
+      <tr>
+        <td class="noborder player-demo-group-header">Content</td>
+        <td class="player-demo-group-options">
+          <div class="player-demo-option-row">
+            <input type="text" class="player-demo-text-input player-demo-tooltip-zindex" size="18" id="playerContent" value="fJ9rUzIMcZQ" alt="Enter the player content. The content could be a video ID, a list of video IDs, a playlist ID, or a channel ID."/>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="noborder player-demo-group-header">Volume</td>
+        <td class="player-demo-group-options">
+          <div class="player-demo-option-row">
+            <a href="javascript:void(0);" onclick="mute();">Mute</a><span class="pipe-separator">|</span><a href="javascript:void(0);" onclick="unMute();">Unmute</a><span class="pipe-separator">|</span>Set:&nbsp;<input id="vol" type="text" class="player-demo-text-input" size="2" onBlur="setVolume(document.getElementById('vol').value)" /> <span style="color:#555"></span> [current level:&nbsp;<span id="volume">--</span>]
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="noborder player-demo-group-header">Controls</td>
+        <td class="player-demo-group-options">
+          <div class="player-demo-option-row">
+            <a href="javascript:void(0);" onclick="play();">Play</a><span class="pipe-separator">|</span><a href="javascript:void(0);" onclick="pause(); getTime();">Pause</a><span class="pipe-separator">|</span><a href="javascript:void(0);" onclick="stop();">Stop</a> 
+          </div>
+          <div class="player-demo-option-row">
+              <label for="seekto">Seek to:</label> <input id="seekto" class="player-demo-text-input" type="text" size="4" />&nbsp;&nbsp;&nbsp;<button class="button-blue button" onclick="seekTo(document.getElementById('seekto').value, true); return false;"/>Go</button>
+          </div>
+          <div id="playlist-position-options" style="display:none">
+            <div class="player-demo-option-row">
+              <a href="javascript:void(0);" onclick="previousVideo();">Previous</a><span class="pipe-separator">|</span><a href="javascript:void(0);" onclick="nextVideo();">Next</a>
+              <span style="padding-left:25px">
+                <label for="seekto">Go to (playlist index number):</label>&nbsp;<input id="playVideoAt" type="text" class="player-demo-text-input" size="4" />&nbsp;&nbsp;&nbsp;<button class="button-blue button" onclick="playVideoAt(document.getElementById('playVideoAt').value, true); return false;"/>Go</button>
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+  </body>
+</html>
